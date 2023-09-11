@@ -3,10 +3,10 @@ body {
 }
 
 h1 {
-    font-size: 2.4em;
+    font-size: 3.2em;
     font-weight: bold;
     text-align: center;
-    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -31,13 +31,6 @@ a {
     margin-bottom: 2em;
 }
 
-.button {
-    background-color: #6C0E25;
-    color: white;
-    text-decoration: none;
-    padding: 0.4em 1.5em 0.4em 1.5em ;
-}
-
 header {
     position: fixed;
     width: 100%;
@@ -46,7 +39,8 @@ header {
 }
 
 .navbar {
-    background-color: #f0f0f0;
+    background-color: white;
+    opacity: 95%;
     padding: 20px;
 }
 
@@ -56,7 +50,7 @@ header {
     align-items: center;
 }
 
-.navbar-left{
+.navbar-left {
     text-align: left;
     padding-left: 16px;
     font-size: 1.2em;
@@ -99,6 +93,7 @@ section {
     padding: 4em;
 }
 
+/* Parallax effect */
 .parallax {
     background-image: url(img/domaine.jpeg);
     height: 100%;
@@ -118,21 +113,157 @@ section {
 }
 
 .top {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-.top p {
+    position: relative;
     text-align: center;
-    font-size: 1.2em;
     color: white;
+    padding-top: 12em;
+    padding-bottom: 4em;
 }
 
+.top a {
+    margin-top: 8em;
+}
+
+/* Animated message */
+.message {
+    position: absolute;
+    width: 100%;
+    top: 32%;
+    transform: translate(-10%, -50%);
+    margin-bottom: 1em;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+.message p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    font-family: 'Satisfy', cursive;
+    font-size: 2.8em;
+  }
+  
+.word {
+    position: absolute;
+    opacity: 0;
+    margin-left: 0.2em;
+    color: #6C0E25;
+    font-weight: bold;
+  }
+  
+.letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+
+.word .letter {
+    margin-right: 0.05em; /* すべての文字間に適用されるデフォルトのマージン */
+}
+
+.word.bon .letter:nth-child(2),
+.word.vrai .letter:nth-child(2) {
+    margin-right: 0.4em; /* "du" と "bon," 、"du" と "vrai," の間のマージン */
+}
+  
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+  
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+  
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button {
+    display: block;
+    background-color: #6C0E25;
+    opacity: 90%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    letter-spacing:  0.05em;
+    padding: 0.8em 0.8em;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 20%;
+}
+
+/* About section */
 .about {
     background-color: white;
-    opacity: 80%;
+    opacity: 90%;
+}
+
+/* Footer section */
+footer {
+    background-color: #6C0E25;
+    color: white;
+    width: 100%;
 }
 
 footer p {
     text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-left {
+    flex: 1;
+    padding: 1.6em 3.2em;
+    justify-content: start;
+}
+
+.footer-left h2 {
+    text-align: left;
+    font-weight: 400;
+}
+
+address {
+    padding-bottom: 0.8em;
+}
+
+.footer-left a {
+    color: white;
+}
+
+.footer-right {
+    flex: 1;
+    padding: 1.6em 3.2em;
+}
+
+.button-white {
+    background-color: white;
+    opacity: 90%;
+    color:#6C0E25;
+}
+
+.legal {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.caution {
+    font-size: 0.8em;
+}
+
+.copyright {
+    font-size: 0.8em;
+    padding-bottom: 2em;
 }
