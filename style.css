@@ -1,0 +1,138 @@
+body {
+    font-family: 'PT Serif', serif;
+}
+
+h1 {
+    font-size: 2.4em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.subtitle {
+    color: #6C0E25;
+    text-decoration: underline;
+    text-decoration-color: #6C0E25;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 16px;
+    margin-bottom: 2em;
+}
+
+.button {
+    background-color: #6C0E25;
+    color: white;
+    text-decoration: none;
+    padding: 0.4em 1.5em 0.4em 1.5em ;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left{
+    text-align: left;
+    padding-left: 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.navbar-right {
+    text-align: right;
+    padding-right: 16px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar a.active-link {
+    text-decoration: underline;
+    text-decoration-color: #6C0E25;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 12px;
+}
+
+main {
+    padding-top: 100px;
+}
+
+section {
+    padding: 4em;
+}
+
+.parallax {
+    background-image: url(img/domaine.jpeg);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image {
+    background-image: url(img/famille.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.top {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.top p {
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+}
+
+.about {
+    background-color: white;
+    opacity: 80%;
+}
+
+footer p {
+    text-align: center;
+}
