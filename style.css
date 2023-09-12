@@ -156,7 +156,6 @@ section {
 .letter {
     display: inline-block;
     position: relative;
-    float: left;
     transform: translateZ(25px);
     transform-origin: 50% 50% 25px;
 }
@@ -200,6 +199,18 @@ section {
     width: 20%;
 }
 
+/* Fade up animation */
+.fadeUpTrigger {
+    opacity: 0;
+    transform: translateY(40px); /* 初期位置を下に設定 */
+    transition: opacity  0.8s, transform 0.8s;
+}
+
+.fadeUpTrigger.fadeUp {
+    opacity: 1;
+    transform: translateY(0); /* 最終位置を元に戻す */
+}
+
 /* About section */
 .about {
     background-color: white;
@@ -225,11 +236,11 @@ footer p {
 .footer-left {
     flex: 1;
     padding: 1.6em 3.2em;
-    justify-content: start;
+    justify-content: center;
+    text-align: center;
 }
 
 .footer-left h2 {
-    text-align: left;
     font-weight: 400;
 }
 
@@ -252,18 +263,24 @@ address {
     color:#6C0E25;
 }
 
-.legal {
-    display: flex;
-    justify-content: space-around;
-    text-decoration: none;
-    font-size: 0.8em;
-}
-
 .caution {
     font-size: 0.8em;
 }
 
-.copyright {
+.end-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3em 2em 4em;
+    vertical-align: top;
     font-size: 0.8em;
-    padding-bottom: 2em;
+}
+
+.legal {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+.legal p {
+    padding-right: 2em;
 }

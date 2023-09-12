@@ -1,5 +1,3 @@
-// Parallax effect
-
 // ページが読み込まれたときに実行
 document.addEventListener("DOMContentLoaded", function () {
     // リンクをクリックしたときの処理
@@ -97,3 +95,30 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 4000);
+
+
+// Fade animation
+function triggerAnimation() {
+  // すべての.fadeUpTrigger要素を取得
+  var elements = document.querySelectorAll(".fadeUpTrigger");
+
+  elements.forEach(function(elem) {
+      var elemPos = elem.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight;
+
+      // 画面内に要素が入ったら.fadeUpクラスを追加
+      if (elemPos < windowHeight && elemPos > -elem.offsetHeight) {
+          elem.classList.add("fadeUp");
+      } else {
+      // 要素が画面外に出たら.fadeUpクラスを削除
+          elem.classList.remove("fadeUp");
+      }
+  });
+}
+
+// スクロール時にアニメーションをトリガー
+window.addEventListener("scroll", function() {
+  triggerAnimation();
+});
+
+
