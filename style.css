@@ -135,7 +135,7 @@ section {
     display: flex;
     justify-content: center;
     text-align: center;
-  }
+}
   
 .message p {
     display: inline-block;
@@ -143,7 +143,7 @@ section {
     margin: 0;
     font-family: 'Satisfy', cursive;
     font-size: 2.8em;
-  }
+}
   
 .word {
     position: absolute;
@@ -151,7 +151,7 @@ section {
     margin-left: 0.2em;
     color: #6C0E25;
     font-weight: bold;
-  }
+}
   
 .letter {
     display: inline-block;
@@ -233,40 +233,88 @@ footer p {
     justify-content: space-around;
 }
 
+/* Footer LEFT */
 .footer-left {
     flex: 1;
-    padding: 1.6em 3.2em;
-    justify-content: center;
+    padding: 1.6em 3.2em 0.8em 3.2em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.footer-left h2 {
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h2 {
     font-weight: 400;
 }
 
 address {
-    padding-bottom: 0.8em;
+    margin-bottom: 0.4em;
 }
 
-.footer-left a {
+.contact-info a {
     color: white;
+    margin-bottom: 0.4em;
 }
 
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    margin: auto;
+}
+
+.contact-form i {
+    padding-right: 1em;
+}
+
+/* Footer RIGHT */
 .footer-right {
     flex: 1;
-    padding: 1.6em 3.2em;
+    padding: 1.6em 3.2em 0.8em 3.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 100%;
 }
 
-.button-white {
-    background-color: white;
-    opacity: 90%;
-    color:#6C0E25;
+.social-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.caution {
+.social-icon {
+    display: flex;
+    width: 80%;
+    height: 20%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-icon i {
+    font-size: 2em;
+    margin: 0.4em;
+}
+
+.social-icon img {
+    height: 72%;
+}
+
+.caution p {
     font-size: 0.8em;
+    text-align: center;
+    align-self: flex-start;
 }
 
+/* Footer BOTTOM */
 .end-footer {
     display: flex;
     justify-content: space-between;
