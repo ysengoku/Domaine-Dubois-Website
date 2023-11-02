@@ -121,4 +121,12 @@ window.addEventListener("scroll", function() {
   triggerAnimation();
 });
 
-
+// ワインのカルーセル
+$(document).ready(function(){
+  $('.carousel').slick({
+      slidesToShow: 3, // 表示するスライドの数
+      slidesToScroll: 1, // Nombre de diapositives à faire défiler à la fois (par défaut)
+      autoplay: true,
+      autoplaySpeed: 2000, // オートプレイの速さ (en millisecondes)
+  });
+});

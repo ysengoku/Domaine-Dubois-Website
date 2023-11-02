@@ -217,6 +217,47 @@ section {
     opacity: 90%;
 }
 
+/* Wine section */
+.carousel-container {
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    list-style: none;
+    padding: 0;
+    max-width: 100%;
+}
+
+.carousel li {
+    width: 148px;
+    height: auto;
+    margin: 1.6em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel img {
+    max-width: 60%;
+}
+
+.carousel h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
 /* Footer section */
 footer {
     background-color: #6C0E25;
